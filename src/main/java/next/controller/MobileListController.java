@@ -12,11 +12,11 @@ import core.mvc.ModelAndView;
 
 public class MobileListController  extends AbstractController{
 	private QuestionDao questionDao = new QuestionDao();
-	private List<Question> questions;
 	
 	@Override
 	public ModelAndView execute(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
+		List<Question> questions;
 		questions = questionDao.findAll();
 		
 		ModelAndView mav = jsonView();
