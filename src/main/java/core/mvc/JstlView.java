@@ -24,6 +24,7 @@ public class JstlView implements View {
 			return;
 		}
 		
+		//모델에 있는 object를 request에 속성으로 물리고, forward함.
 		Set<String> keys = model.keySet();
 		for (String key : keys) {
 			request.setAttribute(key, model.get(key));
