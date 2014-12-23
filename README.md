@@ -12,4 +12,12 @@
 
 
 2. 질문 목록은 정상적으로 동작하지만 질문하기 기능은 정상적으로 동작하지 않는다. 질문하기 기능을 구현한다. 질문 추가 로직은 QuestionDao 클래스의 insert method 활용 가능하다. HttpServletRequest에서 값을 추출할 때는 ServletRequestUtils 클래스를 활용 가능하다. 
+=> ServletRequestUtils 안 쓰였다. list.next로 redirect해주어야 한다.
+
+3. 자바 기반으로 웹 프로그래밍을 할 경우 한글이 깨진다. 한글이 깨지는 문제를 해결하기 위해 ServletFilter를 활요해 문제를 해결할 수 있다. core.web.filter.CharacterEncodingFilter에 어노테이션 설정을 통해 한글 문제를 해결한다.
+=>
+참고: http://neokido.tistory.com/entry/EncodingFilter-%EB%A1%9C-%ED%95%9C%EA%B8%80-%EC%B2%98%EB%A6%AC-%ED%95%98%EA%B8%B0
+주의: web.xml에서 filter와 welcome-file-list의 위치가 정해져있다는 것! 
+
+
 
