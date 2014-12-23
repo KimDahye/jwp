@@ -9,4 +9,12 @@
 * line 39에서 ListController의 execute를 실행한다. 이 메소드 안에서, DB에 다녀와 질문목록을 가져오고, ModelAndView의 객체 mav view로는 jstlView(list.jsp)를 물리고, model에는 질문목록 리스트를 questions라는 이름으로 물린다.
 * line 41에서 mav의 model에 있는 질문목록 리스트를 request에 questions(key name)라는 이름의 속성으로 물리고, list.jsp로 forward함.
 * list.jsp에서는 EL을 통해 위에서 물린 questions에 접근하여 question목록을 보여준다.
- 
+
+
+2. 질문 목록은 정상적으로 동작하지만 질문하기 기능은 정상적으로 동작하지 않는다. 질문하기 기능을 구현한다. 질문 추가 로직은 QuestionDao 클래스의 insert method 활용 가능하다. HttpServletRequest에서 값을 추출할 때는 ServletRequestUtils 클래스를 활용 가능하다. 
+
+
+writer
+title
+contents
+countofcomments(0)
